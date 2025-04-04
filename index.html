@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>파면되었습니다</title>
+  <style>
+    /* 전체 화면 채우기 및 배경 그라데이션 */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: linear-gradient(135deg, #ff7e5f, #feb47b);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Arial', sans-serif;
+    }
+    /* 메인 텍스트 스타일 */
+    h1 {
+      font-size: 10vw; /* 뷰포트 크기에 따라 조절 */
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      margin: 0;
+      opacity: 0; /* 초기 투명도 */
+    }
+    /* 링크 텍스트 스타일 (h3 크기) */
+    h3 {
+      font-size: 2vw;
+      color: #fff;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+      margin-top: 20px;
+      opacity: 0; /* 초기 투명도 */
+    }
+    h3 a {
+      color: #fff;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>파면되었습니다</h1>
+  <h3><a href="https://youtu.be/GoAVYTCGKTE?si=0taBHiOL_ZnqGsi5" target="_blank">선고영상 바로가기</a></h3>
+
+  <script>
+    // 페이지 로드 후 페이드인 효과 적용
+    document.addEventListener("DOMContentLoaded", function() {
+      const h1 = document.querySelector("h1");
+      const h3 = document.querySelector("h3");
+      setTimeout(() => {
+        h1.style.transition = "opacity 1s ease-in";
+        h3.style.transition = "opacity 1s ease-in";
+        h1.style.opacity = 1;
+        h3.style.opacity = 1;
+      }, 100);
+    });
+  </script>
+</body>
+</html>
